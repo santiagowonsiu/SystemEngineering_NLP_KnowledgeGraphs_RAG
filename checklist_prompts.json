@@ -1,0 +1,124 @@
+{
+    "Overall Instructions": {
+        "Instructions": "1. Identify the Key Elements: For each requirement, identify key terms and elements as specified in the checklist prompt. Any grammatical object, subject, or adverbial (including manner, place, time, etc.) added or reviewed must be enclosed in brackets [ ] or use 'TBD/TBR'.\n2. Assess Based on Criteria: Use the provided instructions to assess whether the requirement meets the criteria. Any grammatical object, subject, or adverbial (including manner, place, time, etc.) added or reviewed must be enclosed in brackets [ ] or use 'TBD/TBR'.\n3. Inference: Based on the assessment, provide the inference statement indicating PASSED or NOT PASSED, along with the specific reasoning. Any grammatical object, subject, or adverbial (including manner, place, time, etc.) added or reviewed must be enclosed in brackets [ ] or use 'TBD/TBR'.\n4. Recommendation: If the requirement does not pass, provide a recommendation on how it could be rewritten to PASS. Any grammatical object, subject, or adverbial (including manner, place, time, etc.) added or reviewed must be enclosed in brackets [ ] or use 'TBD/TBR'.\n5. Provide a corrected version of the requirement based on the recommendation if it does not pass. Use placeholders such as '[insert value here]' or 'TBD/TBR' to avoid specifying exact values. Any grammatical object, subject, or adverbial (including manner, place, time, etc.) added or reviewed must be enclosed in brackets [ ] or use 'TBD/TBR'."
+    },
+    "C.1 Use of Correct Terms: Requirement format (Shall, Will, Should)": {
+        "Requirement": "Does the following requirement use 'shall' for mandatory requirements, 'will' for facts or declaration of purpose, or 'should' for goals? '{requirement}'",
+        "Instructions to assess the requirement": "Identify if the requirement uses 'shall' for mandatory requirements, 'will' for facts or declaration of purpose, or 'should' for goals. If 'shall' is used, the other two should be marked as N/A.",
+        "Inference: if condition met print text in": "PASSED: The requirement uses correct terms ('shall' for mandatory, 'will' for facts or declaration of purpose, 'should' for goals).",
+        "Inference: If condition not met print text in": "NOT PASSED: The requirement does not use correct terms ('shall', 'will', or 'should').",
+        "Recommendation": "Rewrite the requirement to use 'shall' for mandatory requirements, 'will' for facts or declaration of purpose, or 'should' for goals. For example: '[Responsible party] shall [mandatory action]', 'The system will [fact or declaration of purpose]', '[Responsible party] should [goal]'."
+    },
+    "C.2 Editorial Checklist: Active voice": {
+        "Requirement": "Is the following requirement in the form 'responsible party shall perform such and such' using the active voice? '{requirement}'",
+        "Instructions to assess the requirement": "Analyze if the requirement contains the following three elements: 'something that could be interpreted as a responsible party' (e.g., 'the system', 'the subsystem', 'the user'), 'the word \"shall\"', 'and action expected for the responsible party. The condition is met if the three elements are existent.",
+        "Inference: if condition met print text in": "PASSED: The requirement is in the active voice. Party: [mention the party], Action: [mention the action]",
+        "Inference: If condition not met print text in": "NOT PASSED: The requirement is not in the active voice. Mention if any of the elements was found and what was it, and which was not found.",
+        "Recommendation": "Rewrite the requirement in the active voice. For example: '[Responsible party] shall [action]. However, make sure it is still containing same information as the input (i.e., no details are missed from input {requirement})'"
+    },
+    "C.2 Editorial Checklist: Product form": {
+        "Requirement": "Is the following requirement in the form 'product ABC shall XYZ'? '{requirement}'",
+        "Instructions to assess the requirement": "1. Identify product (could be any object, system, component, etc.) and actions. 2. Identify the verb in active voice. 3. Validate active voice format.",
+        "Inference: if condition met print text in": "PASSED: The requirement is in the correct product form.",
+        "Inference: If condition not met print text in": "NOT PASSED: The requirement is not in the correct product form. Mention if any of the elements was found and what was it, and which was not found.",
+        "Recommendation": "Rewrite the requirement in the correct product form. For example: 'Product ABC shall [action].'"
+    },
+    "C.2 Editorial Checklist: Complete with tolerances": {
+        "Requirement": "Does the following requirement include tolerances for qualitative/performance values? '{requirement}'",
+        "Instructions to assess the requirement": "Check for the presence of tolerances for qualitative/performance values.",
+        "Inference: if condition met print text in": "PASSED: Tolerances included.",
+        "Inference: If condition not met print text in": "NOT PASSED: Tolerances not included.",
+        "Recommendation": "Include tolerances for qualitative/performance values in the requirement. For example: 'The system shall [action] within [insert tolerance value here].'"
+    },
+    "C.2 Editorial Checklist: Free of implementation details": {
+        "Requirement": "Is the following requirement free of implementation details, stating what is needed rather than how to provide it? '{requirement}'",
+        "Instructions to assess the requirement": "Verify that the requirement states what is needed rather than how to provide it.",
+        "Inference: if condition met print text in": "PASSED: Free of implementation details.",
+        "Inference: If condition not met print text in": "NOT PASSED: Includes implementation details.",
+        "Recommendation": "Rewrite the requirement to state what is needed rather than how to provide it. For example: 'The system shall [what is needed].'"
+    },
+    "C.2 Editorial Checklist: Free of descriptions of operations": {
+        "Requirement": "Is the following requirement free of descriptions of operations, focusing on what the product should satisfy rather than activities involving the product? '{requirement}'",
+        "Instructions to assess the requirement": "Ensure the requirement focuses on what the product should satisfy rather than describing operations.",
+        "Inference: if condition met print text in": "PASSED: Free of operational descriptions.",
+        "Inference: If condition not met print text in": "NOT PASSED: Includes operational descriptions.",
+        "Recommendation": "Rewrite the requirement to focus on what the product should satisfy. For example: 'The product shall [what it should satisfy].'"
+    },
+    "C.3 General Goodness Checklist: Grammatically correct": {
+        "Requirement": "Is the following requirement grammatically correct? '{requirement}'",
+        "Instructions to assess the requirement": "Check for grammatical correctness.",
+        "Inference: if condition met print text in": "PASSED: Grammatically correct.",
+        "Inference: If condition not met print text in": "NOT PASSED: Contains grammatical errors.",
+        "Recommendation": "Correct any grammatical errors in the requirement. For example: 'The system shall [corrected requirement].'"
+    },
+    "C.3 General Goodness Checklist: Free of typos, misspellings, and punctuation errors": {
+        "Requirement": "Is the following requirement free of typos, misspellings, and punctuation errors? '{requirement}'",
+        "Instructions to assess the requirement": "Check for typos, misspellings, and punctuation errors.",
+        "Inference: if condition met print text in": "PASSED: Free of typos, misspellings, and punctuation errors.",
+        "Inference: If condition not met print text in": "NOT PASSED: Contains typos, misspellings, or punctuation errors.",
+        "Recommendation": "Correct any typos, misspellings, or punctuation errors in the requirement. For example: 'The system shall [corrected requirement].'"
+    },
+    "C.3 General Goodness Checklist: Stated positively": {
+        "Requirement": "Is the following requirement stated positively, avoiding negative constructions such as 'shall not'? '{requirement}'",
+        "Instructions to assess the requirement": "Check if the requirement is stated positively.",
+        "Inference: if condition met print text in": "PASSED: Positively stated.",
+        "Inference: If condition not met print text in": "NOT PASSED: Negatively stated.",
+        "Recommendation": "Rewrite the requirement to be stated positively. For example: 'The system shall [positive statement].'"
+    },
+    "Clarity: Clear and unambiguous": {
+        "Requirement": "Are the following requirements clear and unambiguous, free from indefinite pronouns and ambiguous terms? '{requirement}'",
+        "Instructions to assess the requirement": "Ensure the requirement is clear and unambiguous, free from indefinite pronouns and ambiguous terms. Check for the presence of placeholders like '[]', 'TBD', or 'TBR'. If any of these placeholders are present, the requirement can be considered as PASSED, unless there are other ambiguities not specified or with a proper placeholder",
+        "Inference: if condition met print text in": "PASSED: Clear and unambiguous.",
+        "Inference: If condition not met print text in": "NOT PASSED: Contains ambiguities.",
+        "Recommendation": "Rewrite the requirement to be clear and unambiguous. If specific values are not defined, use placeholders like '[]', 'TBD', or 'TBR'. For example: 'The system shall [TBD or TBR]'."
+    },
+    "Clarity: Concise and simple": {
+        "Requirement": "Are the following requirements concise and simple? '{requirement}'",
+        "Instructions to assess the requirement": "Check if the requirement is concise and simple. It is allowed to have text in '[]' or 'TBD' and 'TBR', but inneceary words added to the requirement must be avoided",
+        "Inference: if condition met print text in": "PASSED: Concise and simple.",
+        "Inference: If condition not met print text in": "NOT PASSED: Not concise or simple.",
+        "Recommendation": "Rewrite the requirement to be concise and simple.'"
+    },
+    "Clarity: Single thought per statement": {
+        "Requirement": "Does the following requirement express only one thought per statement, avoiding multiple requirements in a single statement? '{requirement}'",
+        "Instructions to assess the requirement": "Ensure the requirement expresses only one thought per statement.",
+        "Inference: if condition met print text in": "PASSED: Single thought per statement.",
+        "Inference: If condition not met print text in": "NOT PASSED: Contains multiple thoughts.",
+        "Recommendation": "Rewrite the requirement to express only one thought per statement."
+    },
+    "Compliance: Free of implementation specifics": {
+        "Requirement": "Are the following requirements free of implementation specifics, focusing on what is needed rather than how to provide it? '{requirement}'",
+        "Instructions to assess the requirement": "Verify that the requirement focuses on what is needed rather than how to provide it.",
+        "Inference: if condition met print text in": "PASSED: Free of implementation specifics.",
+        "Inference: If condition not met print text in": "NOT PASSED: Contains implementation specifics.",
+        "Recommendation": "Rewrite the requirement to focus on what is needed rather than how to provide it."
+    },
+    "Compliance: Free of descriptions of operations": {
+        "Requirement": "Are the following requirements free of descriptions of operations, avoiding mixing operation details with requirements? '{requirement}'",
+        "Instructions to assess the requirement": "Ensure the requirement avoids mixing operation details with requirements.",
+        "Inference: if condition met print text in": "PASSED: Free of descriptions of operations.",
+        "Inference: If condition not met print text in": "NOT PASSED: Contains descriptions of operations.",
+        "Recommendation": "Rewrite the requirement to avoid mixing operation details."
+    },
+    "Compliance: Free of personnel or task assignments": {
+        "Requirement": "Are the following requirements free of personnel or task assignments, focusing on product requirements? '{requirement}'",
+        "Instructions to assess the requirement": "Verify that the requirement focuses on product requirements and does not assign tasks to personnel.",
+        "Inference: if condition met print text in": "PASSED: Free of personnel or task assignments.",
+        "Inference: If condition not met print text in": "NOT PASSED: Contains personnel or task assignments.",
+        "Recommendation": "Rewrite the requirement to focus on product requirements without assigning tasks."
+    },
+    "Maintainability: Specified in a measurable, verifiable manner": {
+        "Requirement": "Are the requirements for maintainability of the system specified in a measurable and verifiable manner? '{requirement}'",
+        "Instructions to assess the requirement": "Check if the maintainability requirements are specified in a measurable and verifiable manner.",
+        "Inference: if condition met print text in": "PASSED: Measurable and verifiable maintainability requirements.",
+        "Inference: If condition not met print text in": "NOT PASSED: Not measurable or verifiable.",
+        "Recommendation": "Rewrite the requirement to be measurable and verifiable. Make sure that any new measure / specification (i.e., advervials) modification are only added in brackets [ ] or use 'TBD/TBR' so there are no assumptions made about the exact values/content.'"
+    },
+    "Reliability: Clearly defined, measurable, and verifiable reliability requirements": {
+        "Requirement": "Are clearly defined, measurable, and verifiable reliability requirements specified in the following requirement? '{requirement}'",
+        "Instructions to assess the requirement": "Ensure the reliability requirements are clearly defined, measurable, and verifiable. Check for the presence of placeholders like '[]', 'TBD', or 'TBR' which indicate that specific values need to be defined.",
+        "Inference: if condition met print text in": "PASSED: Defined, measurable, and verifiable reliability requirements.",
+        "Inference: If condition not met print text in": "NOT PASSED: Undefined, not measurable, or unverifiable.",
+        "Recommendation": "Rewrite the requirement to be clearly defined, measurable, and verifiable. If specific values are not defined, use placeholders like '[]', 'TBD', or 'TBR'. For example: 'The system shall have a reliability of [TBD] measurable by [method].'"
+    }
+}

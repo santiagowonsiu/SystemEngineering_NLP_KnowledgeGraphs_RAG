@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requirement Review</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+        .column:not(:last-child) {
+            border-right: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Requirement Review Tool</h1>
+    <div class="container">
+        <div class="column">
+            <h2>Input</h2>
+            <form id="requirementForm">
+                <label for="requirement">Requirement:</label><br>
+                <textarea id="requirement" name="requirement" rows="4" cols="50">The Comms. Subsystem shall achieve a downlink data rate.</textarea><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="column">
+            <h2>Processing Updates</h2>
+            <div id="processing"></div>
+        </div>
+        <div class="column">
+            <h2>Final Corrected Requirement</h2>
+            <div id="finalCorrectedRequirement"></div>
+        </div>
+    </div>
+    <div>
+        <h2>Related Entities</h2>
+        <div id="relatedEntities"></div>
+    </div>
+    <div>
+        <h2>Results</h2>
+        <div id="result"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#requirementForm').on('submit', function(event) {
+                event.preventDefault();
+                $('#processing').html('Wait, we are reviewing your requirement...');
+                $('#finalCorrectedRequirement').html('');
+                $('#result').html('');
+                $('#relatedEntities').html('');
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/process',
+                    data: {
+                        requirement: $('#requirement').val()
+                    },
+                    success: function(data) {
+                        let processingUpdates = '';
+                        for (const update of data.processing_updates) {
+                            processingUpdates += `<p>${update.replace(/\n/g, '<br>')}</p>`;
+                        }
+
+                        $('#processing').html(processingUpdates);
+                        $('#finalCorrectedRequirement').html('<pre>' + data.final_corrected_requirement + '</pre>');
+                        $('#result').html('<pre>' + data.final_output + '</pre>');
+                        $('#relatedEntities').html('<pre>' + data.related_entities_output + '</pre>');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
